@@ -14,3 +14,4 @@
 [Day 5: Print Queue](https://adventofcode.com/2024/day/5) | [5.py](5.py) | [5.txt](5.txt) |       49 | 52.71 | &#10003; | &#10003; |
 [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6) | [6.py](6.py) | [6.txt](6.txt) |       76 | 3488.90 | &#10003; | &#10003; |
 [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7) | [7.py](7.py) | [7.txt](7.txt) |       71 | 1377.19 | &#10003; | &#10003; |
+[Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | [8.py](8.py) | [8.txt](8.txt) |       58 | 1.10 | &#10003; | &#10003; |
