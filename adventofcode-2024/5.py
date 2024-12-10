@@ -4,16 +4,16 @@ import time
 from functools import cmp_to_key
 
 
-def parse(data: list[str]) -> tuple[list[tuple[int, int]], list[list[int]]]:
+def parse(data: list[str]) -> tuple[list[str], list[list[int]]]:
     split_index = data.index("")
     page_order = data[:split_index]
-    page_update = data[split_index + 1 :]
-    page_update = [list(map(int, line.split(","))) for line in page_update]
+    page_update_str = data[split_index + 1 :]
+    page_update = [list(map(int, line.split(","))) for line in page_update_str]
 
     return page_order, page_update
 
 
-def solve(data: tuple[list[tuple[int, int]], list[list[int]]], part: int) -> int:
+def solve(data: tuple[list[str], list[list[int]]], part: int) -> int:
     page_order, page_update = data
 
     update_to_process = []
@@ -32,11 +32,11 @@ def solve(data: tuple[list[tuple[int, int]], list[list[int]]], part: int) -> int
     return sum(u[len(u) // 2] for u in update_to_process)
 
 
-def solve1(data: tuple[list[tuple[int, int]], list[list[int]]]) -> int:
+def solve1(data: tuple[list[str], list[list[int]]]) -> int:
     return solve(data, part=1)
 
 
-def solve2(data: tuple[list[tuple[int, int]], list[list[int]]]) -> int:
+def solve2(data: tuple[list[str], list[list[int]]]) -> int:
     return solve(data, part=2)
 
 

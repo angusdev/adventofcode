@@ -4,7 +4,7 @@ import time
 
 
 def parse(data: list[str]) -> tuple:
-    antennas = {}
+    antennas: dict[str, list[tuple[int, int]]] = {}
     for r, row in enumerate(data):
         for c, char in enumerate(row):
             if char != ".":

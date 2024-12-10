@@ -7,7 +7,9 @@ def parse(data: list[str]) -> tuple[list[str], int, int]:
     for row, line in enumerate(data):
         col = line.find("^")
         if col != -1:
-            return [data, row, col]
+            break
+
+    return data, row, col
 
 
 def neighbor(data: list, row: int, col: int, direction: str) -> tuple:
@@ -41,7 +43,7 @@ def solve1(data: tuple[list[str], int, int]) -> set:
             visited.add((row, col))
 
 
-def solve2(data: tuple[list[str], int, int], path: set) -> set:
+def solve2(data: tuple[list[str], int, int], path: set) -> int:
     map, start_row, start_col = data
 
     result = 0

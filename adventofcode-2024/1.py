@@ -3,8 +3,8 @@ import time
 import sys
 
 
-def parse(lines: list[str]) -> tuple[list, list]:
-    return tuple(map(sorted, zip(*[map(int, line.split()) for line in lines])))
+def parse(lines: list[str]) -> tuple[list[int], list[int]]:
+    return tuple(map(sorted, zip(*[map(int, line.split()) for line in lines])))  # type: ignore
 
 
 def solve1(data: tuple[list, list]) -> int:

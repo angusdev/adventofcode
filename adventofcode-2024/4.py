@@ -4,11 +4,13 @@ import time
 from itertools import product
 
 
-def parse(lines: list[str]) -> any:
+def parse(lines: list[str]) -> list[str]:
     return lines
 
 
-def word(data: list[str], row: int, col: int, coords: list[tuple[int, int]]) -> str:
+def word(
+    data: list[str], row: int, col: int, coords: list[tuple[int, int]]
+) -> str | None:
     new_coords = [(row + r, col + c) for r, c in coords]
     if any(
         r < 0 or r >= len(data) or c < 0 or c >= len(data[r]) for r, c in new_coords
